@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Kế Đức - Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; cursor: none; }
+        a, button, input, select { cursor: none !important; }
+        .cursor-dot { width: 8px; height: 8px; background-color: #38bdf8; position: fixed; border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); }
+        .cursor-glow { width: 40px; height: 40px; border: 2px solid rgba(56, 189, 248, 0.5); background-color: rgba(56, 189, 248, 0.1); position: fixed; border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%, -50%); transition: width 0.2s, height 0.2s, background-color 0.2s; }
+        .cursor-glow.hovering { width: 60px; height: 60px; background-color: rgba(56, 189, 248, 0.3); border-color: rgba(56, 189, 248, 0.8); }
+        .search-highlight {
+            background-color: #fde047;
+            color: #000000;
+            border-radius: 2px;
+            padding: 0 2px;
+        }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-[#f8fafc] text-[#1e293b]">
+
+    <header class="bg-white/40 backdrop-blur-2xl sticky top-0 z-50 border-b border-white/50 shadow-[0_4px_30px_rgba(0,0,0,0.05)] shadow-[inset_0_-1px_0_rgba(255,255,255,0.5)]">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="Logo_HUET.svg.png" alt="Logo UET" class="w-10 h-10 object-contain">
+                <span class="font-bold text-[#0f4c81] text-lg">Lê Kế Đức - 25021729</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
+                <a href="about.html" class="hover:text-[#0f4c81] transition font-semibold">About me</a>
+                <a href="#" class="text-[#0f4c81] border-b-2 border-[#0f4c81] pb-1">Projects</a>
+                <a href="conclusion.html" class="hover:text-[#0f4c81] transition">Conclusion</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="searchableContent">
+        <section class="relative bg-gray-900 text-white overflow-hidden min-h-[550px] flex items-center bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.3)), url('hinh-4-16989785062121407335586.webp');">
+            <div id="particles-js" class="absolute inset-0 z-0 opacity-60"></div>
+            <div class="max-w-7xl mx-auto px-6 py-20 relative z-10 w-full" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full font-semibold">Portfolio Projects</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-6 mb-4 max-w-2xl leading-tight text-[#f1f5f9] min-h-[100px]">
+                    <span id="typed-title"></span>
+                </h1>
+                <p class="text-gray-300 max-w-xl text-base mb-8 leading-relaxed">
+                    Trang này là nơi tôi sẽ trình bày hành trình cải thiện kỹ năng số của mình thông qua các sản phẩm của từng bài học trong học phần. Một sự giao thoa giữa tư duy học thuật và công nghệ hiện đại.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#cac-chuong-hoc" class="bg-[#0f4c81] hover:bg-[#0c3e6a] text-white px-6 py-3 rounded font-medium text-sm transition flex items-center space-x-2 scroll-smooth">
+                        <span>Khám phá bài học</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                    </a>
+                    <a href="about.html" class="border border-white/40 hover:border-white text-white px-6 py-3 rounded font-medium text-sm transition bg-white/5 backdrop-blur-sm">
+                        Tìm hiểu về tôi
+                    </a>
+		    <a href="conclusion.html" class="border border-white/40 hover:border-white text-white px-6 py-3 rounded font-medium text-sm transition bg-white/5 backdrop-blur-sm">
+                        Suy nghĩ của tôi
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="relative bg-gradient-to-br from-slate-50 via-blue-50/50 to-purple-50/50 overflow-hidden">
+            <!-- Decorative Blobs for Glass Effect -->
+            <div class="absolute top-10 left-10 w-[500px] h-[500px] bg-blue-300/40 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse"></div>
+            <div class="absolute bottom-10 right-10 w-[500px] h-[500px] bg-purple-300/40 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse" style="animation-delay: 2s;"></div>
+            
+            <main id="cac-chuong-hoc" class="max-w-7xl mx-auto px-6 py-20 scroll-mt-24 transition-all duration-500 relative z-10">
+            <div class="flex justify-between items-end mb-12" data-aos="fade-up">
+                <div>
+                    <h2 class="text-3xl font-bold text-[#0f4c81] mb-2">Học phần gồm có 7 chương</h2>
+                    <p class="text-gray-500 text-sm">Cấu trúc lộ trình phát triển kỹ năng số toàn diện</p>
+                </div>
+                <div class="flex space-x-2 mb-2">
+                    <span class="w-8 h-1 bg-[#0f4c81] rounded"></span>
+                    <span class="w-3 h-1 bg-gray-300 rounded"></span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                
+                <div class="bg-white/40 backdrop-blur-2xl p-8 rounded-3xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.05)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] hover:bg-white/60 hover:-translate-y-2 hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col justify-between min-h-[250px]" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0f4c81] flex items-center justify-center mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400 block mb-1">Chapter 01</span>
+                        <h3 class="font-bold text-lg text-gray-800 mb-3">Máy tính và các thiết bị ngoại vi</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Thao tác cơ bản với tập tin và thư mục, quản lý hệ thống hiệu quả.</p>
+                    </div>
+                    <a href="chapter.html?id=1" target="_blank" class="text-xs font-semibold text-[#0f4c81] hover:underline mt-6 flex items-center space-x-1">
+                        <span>Xem chi tiết bài tập</span> <span class="text-sm">↗</span>
+                    </a>
+                </div>
+
+                <div class="bg-white/40 backdrop-blur-2xl p-8 rounded-3xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.05)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] hover:bg-white/60 hover:-translate-y-2 hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col justify-between min-h-[250px]" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0f4c81] flex items-center justify-center mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.58 4 8 4s4-1.79 4-4V7M4 7c0 2.21 3.58 4 8 4s4-1.79 4-4M4 7c0-2.21 3.58-4 8-4s4 1.79 4 4" /></svg>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400 block mb-1">Chapter 02</span>
+                        <h3 class="font-bold text-lg text-gray-800 mb-3">Khai thác dữ liệu và thông tin</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Tìm kiếm và đánh giá thông tin học thuật từ các nguồn uy tín toàn cầu.</p>
+                    </div>
+                    <a href="chapter.html?id=2" target="_blank" class="text-xs font-semibold text-[#0f4c81] hover:underline mt-6 flex items-center space-x-1">
+                        <span>Xem chi tiết bài tập</span> <span class="text-sm">↗</span>
+                    </a>
+                </div>
+
+                <div class="bg-white/40 backdrop-blur-2xl p-8 rounded-3xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.05)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] hover:bg-white/60 hover:-translate-y-2 hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col justify-between min-h-[250px]" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0f4c81] flex items-center justify-center mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400 block mb-1">Chapter 03</span>
+                        <h3 class="font-bold text-lg text-gray-800 mb-3">Tổng quan về trí tuệ nhân tạo</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Viết prompt hiệu quả cho các tác vụ học tập và tối ưu hóa quy trình làm việc.</p>
+                    </div>
+                    <a href="chapter.html?id=3" target="_blank" class="text-xs font-semibold text-[#0f4c81] hover:underline mt-6 flex items-center space-x-1">
+                        <span>Xem chi tiết bài tập</span> <span class="text-sm">↗</span>
+                    </a>
+                </div>
+
+                <div class="bg-white/40 backdrop-blur-2xl p-8 rounded-3xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.05)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] hover:bg-white/60 hover:-translate-y-2 hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col justify-between min-h-[250px]" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0f4c81] flex items-center justify-center mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400 block mb-1">Chapter 04</span>
+                        <h3 class="font-bold text-lg text-gray-800 mb-3">Giao tiếp và hợp tác trực tuyến</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm trong môi trường số.</p>
+                    </div>
+                    <a href="chapter.html?id=4" target="_blank" class="text-xs font-semibold text-[#0f4c81] hover:underline mt-6 flex items-center space-x-1">
+                        <span>Xem chi tiết bài tập</span> <span class="text-sm">↗</span>
+                    </a>
+                </div>
+
+                <div class="bg-white/40 backdrop-blur-2xl p-8 rounded-3xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.05)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] hover:bg-white/60 hover:-translate-y-2 hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col justify-between min-h-[250px]" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0f4c81] flex items-center justify-center mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400 block mb-1">Chapter 05</span>
+                        <h3 class="font-bold text-lg text-gray-800 mb-3">Sáng tạo nội dung số với AI</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Ứng dụng trí tuệ nhân tạo để hỗ trợ sáng tạo nội dung đa phương tiện.</p>
+                    </div>
+                    <a href="chapter.html?id=5" target="_blank" class="text-xs font-semibold text-[#0f4c81] hover:underline mt-6 flex items-center space-x-1">
+                        <span>Xem chi tiết bài tập</span> <span class="text-sm">↗</span>
+                    </a>
+                </div>
+
+                <div class="bg-white/40 backdrop-blur-2xl p-8 rounded-3xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.05)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] hover:bg-white/60 hover:-translate-y-2 hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col justify-between min-h-[250px]" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0f4c81] flex items-center justify-center mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400 block mb-1">Chapter 06</span>
+                        <h3 class="font-bold text-lg text-gray-800 mb-3">An toàn và liêm chính học thuật</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Sử dụng AI có trách nhiệm, đảm bảo tính liêm chính trong nghiên cứu.</p>
+                    </div>
+                    <a href="chapter.html?id=6" target="_blank" class="text-xs font-semibold text-[#0f4c81] hover:underline mt-6 flex items-center space-x-1">
+                        <span>Xem chi tiết bài tập</span> <span class="text-sm">↗</span>
+                    </a>
+                </div>
+
+                <div class="bg-white/40 backdrop-blur-2xl p-8 rounded-3xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.05)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] hover:bg-white/60 hover:-translate-y-2 hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col justify-between min-h-[250px]" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0f4c81] flex items-center justify-center mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400 block mb-1">Chapter 07</span>
+                        <h3 class="font-bold text-lg text-gray-800 mb-3">Kỹ năng phát triển tương lai</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Định hình tư duy công nghệ và ứng dụng thực tiễn vào hành trình nghề nghiệp.</p>
+                    </div>
+                    <a href="chapter.html?id=7" target="_blank" class="text-xs font-semibold text-[#0f4c81] hover:underline mt-6 flex items-center space-x-1">
+                        <span>Xem chi tiết bài tập</span> <span class="text-sm">↗</span>
+                    </a>
+                </div>
+
+            </div>
+        </main>
+        </div>
+
+        <footer class="bg-white border-t border-gray-100 pt-16 pb-8">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Kết nối với tôi</h3>
+                        <div class="space-y-4 text-sm text-gray-600">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-gray-400">📧</span>
+                                <div>
+                                    <p class="text-[10px] font-bold uppercase tracking-wider text-gray-400">Email</p>
+                                    <p class="font-medium text-gray-700">duc11072k7@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-gray-400">📍</span>
+                                <div>
+                                    <p class="text-[10px] font-bold uppercase tracking-wider text-gray-400">Địa chỉ</p>
+                                    <p class="font-medium text-gray-700">Trường đại học Công nghệ - Đại học Quốc gia Hà Nội, 144 Xuân Thủy, Cầu Giấy</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-gray-400">📞</span>
+                                <div>
+                                    <p class="text-[10px] font-bold uppercase tracking-wider text-gray-400">Số điện thoại</p>
+                                    <p class="font-medium text-gray-700">0847702555</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50/50 p-8 rounded-2xl border border-gray-100 flex flex-col justify-center">
+                        <h4 class="font-semibold text-gray-700 mb-4 text-sm">Mạng xã hội</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <a href="https://github.com/lekeduccodemaster" target="_blank" class="bg-white hover:bg-gray-50 p-3 rounded-lg border border-gray-100 text-xs font-medium text-gray-600 flex items-center space-x-2 transition shadow-sm">
+                                <span>💻</span> <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-100 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+                    <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                        <img src="Logo_HUET.svg.png" alt="Logo UET" class="w-6 h-6 object-contain">
+                        <span class="font-medium text-gray-500">Lê Kế Đức</span>
+                        <span>© 2026 VNU-UET Digital Skills Portfolio. All rights reserved.</span>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="hover:text-gray-600">Privacy Policy</a>
+                        <a href="#" class="hover:text-gray-600">Terms of Service</a>
+                        <a href="#" class="hover:text-gray-600">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelector('a[href="#cac-chuong-hoc"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.getElementById('cac-chuong-hoc');
+            if (target) {
+                const headerOffset = 100;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    </script>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        if(document.getElementById('typed-title')) {
+            new Typed('#typed-title', {
+                strings: ["Hành trình khám phá <br>tri thức số"],
+                typeSpeed: 40,
+                showCursor: true,
+                cursorChar: '|'
+            });
+        }
+
+        const dot = document.getElementById('cursor-dot');
+        const glow = document.getElementById('cursor-glow');
+        let mouseX = 0, mouseY = 0, glowX = 0, glowY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX; mouseY = e.clientY;
+            dot.style.left = mouseX + 'px'; dot.style.top = mouseY + 'px';
+        });
+
+        function animateCursor() {
+            glowX += (mouseX - glowX) * 0.15; glowY += (mouseY - glowY) * 0.15;
+            glow.style.left = glowX + 'px'; glow.style.top = glowY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        document.querySelectorAll('a, button, input, select').forEach(el => {
+            el.addEventListener('mouseenter', () => glow.classList.add('hovering'));
+            el.addEventListener('mouseleave', () => glow.classList.remove('hovering'));
+        });
+
+        if(document.getElementById('particles-js')) {
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": "#ffffff" },
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.5, "random": false },
+                    "size": { "value": 3, "random": true },
+                    "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+                    "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                    "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
+                },
+                "retina_detect": true
+            });
+        }
+    </script>
+</body>
+</html>

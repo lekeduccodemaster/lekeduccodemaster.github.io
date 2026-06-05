@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Lê Kế Đức</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; cursor: none; }
+        a, button, input, select { cursor: none !important; }
+        .cursor-dot { width: 8px; height: 8px; background-color: #38bdf8; position: fixed; border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); }
+        .cursor-glow { width: 40px; height: 40px; border: 2px solid rgba(56, 189, 248, 0.5); background-color: rgba(56, 189, 248, 0.1); position: fixed; border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%, -50%); transition: width 0.2s, height 0.2s, background-color 0.2s; }
+        .cursor-glow.hovering { width: 60px; height: 60px; background-color: rgba(56, 189, 248, 0.3); border-color: rgba(56, 189, 248, 0.8); }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-[#f8fafc] text-[#1e293b]">
+
+    <header class="bg-white/40 backdrop-blur-2xl sticky top-0 z-50 border-b border-white/50 shadow-[0_4px_30px_rgba(0,0,0,0.05)] shadow-[inset_0_-1px_0_rgba(255,255,255,0.5)]">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="Logo_HUET.svg.png" alt="Logo UET" class="w-10 h-10 object-contain">
+                <span class="font-bold text-[#0f4c81] text-lg">Lê Kế Đức - 25021729</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
+                <a href="#" class="text-[#0f4c81] border-b-2 border-[#0f4c81] pb-1 font-semibold">About me</a>
+                <a href="LeKeDucPortfolio.html" class="hover:text-[#0f4c81] transition">Projects</a>
+                <a href="conclusion.html" class="hover:text-[#0f4c81] transition">Conclusion</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-12">
+            <div class="lg:col-span-7 order-2 lg:order-1" data-aos="fade-right">
+                <span class="text-[11px] uppercase tracking-wider bg-[#dbeafe] text-[#1e40af] px-3 py-1 rounded-full font-bold">
+                    💻 Computer Science Student & Tech Enthusiast
+                </span>
+                <h1 class="text-3xl md:text-4xl font-extrabold mt-4 mb-5 leading-tight text-slate-950 min-h-[80px]">
+                    <span id="typed-title"></span>
+                </h1>
+                <p class="text-gray-600 text-sm leading-relaxed mb-6 text-justify">
+                    Chào bạn! Mình là Lê Kế Đức, sinh viên ngành Khoa học máy tính, trường đại học Công nghệ - Đại học Quốc Gia Hà Nội. Với niềm đam mê trong việc tìm hiểu công nghệ, đặc biệt là Trí tuệ nhân tạo (AI), mình đang hướng đến việc trở thành một chuyên gia lĩnh vực công nghệ số có khả năng ứng dụng công nghệ để tối ưu hóa quy trình làm việc.
+                </p>
+                <div class="flex flex-wrap gap-3 text-xs text-gray-600">
+                    <div class="bg-white px-4 py-2 rounded-lg border border-gray-100 flex items-center space-x-2 shadow-sm">
+                        <span>✉️</span> <span class="font-medium">duc11072k7@gmail.com</span>
+                    </div>
+                    <div class="bg-white px-4 py-2 rounded-lg border border-gray-100 flex items-center space-x-2 shadow-sm">
+                        <span>📍</span> <span class="font-medium">Hanoi, Vietnam</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center relative" data-aos="fade-left">
+                <div class="relative w-72 h-96 bg-white p-3 rounded-2xl shadow-xl border border-gray-100">
+                    <img src="me.png" alt="Lê Kế Đức Portrait" class="w-full h-full object-cover rounded-xl">
+                    <div class="absolute -top-3 -right-4 bg-white/90 backdrop-blur-sm shadow px-3 py-1.5 rounded-xl border border-gray-100 flex items-center space-x-1 text-[10px] font-bold text-gray-700">
+                        <span>💻</span> <span>AI Analysis</span>
+                    </div>
+                    <div class="absolute -bottom-3 -left-4 bg-white/90 backdrop-blur-sm shadow px-3 py-1.5 rounded-xl border border-gray-100 flex items-center space-x-1 text-[10px] font-bold text-gray-700">
+                        <span>🤖</span> <span>AI Ethics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
+            <div class="lg:col-span-7 bg-white p-8 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between" data-aos="fade-up">
+                <div>
+                    <div class="flex items-center space-x-2 text-[#0f4c81] font-bold text-base mb-6">
+                        <span>📈</span>
+                        <h2>Thế mạnh & Kỹ năng</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h3 class="text-xs font-bold text-[#0f4c81] uppercase tracking-wider mb-3">Tư duy & Thái độ</h3>
+                            <ul class="space-y-2 text-xs text-gray-600">
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-green-500 font-bold">✓</span>
+                                    <span>Ham học hỏi, luôn cập nhật kiến thức mới</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-green-500 font-bold">✓</span>
+                                    <span>Khả năng nghiên cứu và phân tích độc lập</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xs font-bold text-[#0f4c81] uppercase tracking-wider mb-3">Công cụ & Thực tiễn</h3>
+                            <ul class="space-y-2 text-xs text-gray-600">
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-green-500 font-bold">✓</span>
+                                    <span>Thành thạo tin học văn phòng (Office 365)</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <span class="text-green-500 font-bold">✓</span>
+                                    <span>Kỹ năng áp dụng kiến thức công nghệ vào thực tế</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-50">
+                    <span class="bg-gray-100 text-gray-600 text-[10px] font-medium px-2.5 py-1 rounded">Research</span>
+                    <span class="bg-gray-100 text-gray-600 text-[10px] font-medium px-2.5 py-1 rounded">Public Speaking</span>
+                    <span class="bg-gray-100 text-gray-600 text-[10px] font-medium px-2.5 py-1 rounded">AI Analysis</span>
+                    <span class="bg-gray-100 text-gray-600 text-[10px] font-medium px-2.5 py-1 rounded">Data Literacy</span>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-[#0f4c81] text-white p-8 rounded-2xl shadow-sm flex flex-col justify-center space-y-6" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="font-bold text-base tracking-wide border-b border-white/10 pb-2">Sở thích cá nhân</h2>
+                
+                <div class="space-y-1">
+                    <div class="flex items-center space-x-2 font-bold text-sm">
+                        <span>🌐</span>
+                        <h3>Thể thao</h3>
+                    </div>
+                    <p class="text-white/80 text-xs pl-6 leading-relaxed">Rèn luyện thể chất giúp mình giữ được tinh thần minh mẫn và tính kỷ luật cao trong học tập.</p>
+                </div>
+
+                <div class="space-y-1">
+                    <div class="flex items-center space-x-2 font-bold text-sm">
+                        <span>📄</span>
+                        <h3>Công nghệ</h3>
+                    </div>
+                    <p class="text-white/80 text-xs pl-6 leading-relaxed">Khám phá các thiết bị thông minh và phần mềm mới để tối ưu hóa cuộc sống hàng ngày.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-tr from-blue-600 via-[#60a5fa] to-purple-500 text-white p-8 rounded-2xl shadow-lg mb-12 relative overflow-hidden" data-aos="zoom-in">
+            <div id="particles-js" class="absolute inset-0 z-0 opacity-40 mix-blend-overlay"></div>
+            <div class="relative z-10">
+                <div class="flex items-center space-x-2 font-bold text-base mb-6">
+                <span>🏳️</span>
+                <h2>Mục tiêu học tập</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white/20 backdrop-blur-xl p-5 rounded-xl border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.15)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] hover:bg-white/30 hover:scale-[1.02] transition-all duration-300">
+                    <span class="text-2xl font-black block mb-2 opacity-60">01.</span>
+                    <p class="text-xs leading-relaxed font-medium">Nâng cao kỹ năng Digital Skills ứng dụng trong ngành Khoa học Máy tính.</p>
+                </div>
+                <div class="bg-white/20 backdrop-blur-xl p-5 rounded-xl border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.15)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] hover:bg-white/30 hover:scale-[1.02] transition-all duration-300">
+                    <span class="text-2xl font-black block mb-2 opacity-60">02.</span>
+                    <p class="text-xs leading-relaxed font-medium">Nghiên cứu sâu về đạo đức AI và công nghệ.</p>
+                </div>
+                <div class="bg-white/20 backdrop-blur-xl p-5 rounded-xl border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.15)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] hover:bg-white/30 hover:scale-[1.02] transition-all duration-300">
+                    <span class="text-2xl font-black block mb-2 opacity-60">03.</span>
+                    <p class="text-xs leading-relaxed font-medium">Hoàn thiện kỹ năng ngoại ngữ chuyên ngành (Tiếng Anh).</p>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer class="border-t border-gray-100 py-6 bg-white text-xs text-gray-400">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-2 md:mb-0">
+                <span class="font-bold text-gray-700 text-sm">Lê Kế Đức</span>
+                <span class="ml-2">© 2026 VNU-UET Digital Skills Portfolio. All rights reserved.</span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-gray-600">Privacy Policy</a>
+                <a href="#" class="hover:text-gray-600">Terms of Service</a>
+                <a href="#" class="hover:text-gray-600">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        if(document.getElementById('typed-title')) {
+            new Typed('#typed-title', {
+                strings: ["Mastering Digital Skills <br>& <span class='text-[#0f4c81]'>Future Technologies</span>"],
+                typeSpeed: 40,
+                showCursor: true,
+                cursorChar: '|'
+            });
+        }
+
+        const dot = document.getElementById('cursor-dot');
+        const glow = document.getElementById('cursor-glow');
+        let mouseX = 0, mouseY = 0, glowX = 0, glowY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX; mouseY = e.clientY;
+            dot.style.left = mouseX + 'px'; dot.style.top = mouseY + 'px';
+        });
+
+        function animateCursor() {
+            glowX += (mouseX - glowX) * 0.15; glowY += (mouseY - glowY) * 0.15;
+            glow.style.left = glowX + 'px'; glow.style.top = glowY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        document.querySelectorAll('a, button, input, select').forEach(el => {
+            el.addEventListener('mouseenter', () => glow.classList.add('hovering'));
+            el.addEventListener('mouseleave', () => glow.classList.remove('hovering'));
+        });
+        if(document.getElementById('particles-js')) {
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": { "value": 50, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": "#ffffff" },
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.5, "random": false },
+                    "size": { "value": 3, "random": true },
+                    "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+                    "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                    "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
+                },
+                "retina_detect": true
+            });
+        }
+    </script>
+</body>
+</html>
